@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>📚 READICTION</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="webpage-body">
+  <!-- LOGIN PAGE -->
+  <div class="container" id="loginPage">
+    <form id="login-form">
+      <h2>📚 READICTION Login</h2>
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p>Don't have an account? <a onclick="showPage('registerPage')">Register</a></p>
+
+      <!-- QR CODE SECTION -->
+      <div style="margin-top:20px;">
+        <h3>📲 Scan to Login</h3>
+        <canvas id="qrcode"></canvas>
+      </div>
+    </form>
+  </div>
+
+  <!-- REGISTER PAGE -->
+  <div class="container" id="registerPage">
+    <form id="register-form">
+      <h2>📚 READICTION</h2>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <input type="tel" placeholder="Phone Number (optional)" />
+      <select required>
+        <option value="">Select User Type</option>
+        <option value="user">USER</option>
+        <option value="admin">ADMIN</option>
+      </select>
+      <button type="submit">Register</button>
+      <p>Already have an account? <a onclick="showPage('loginPage')">Login</a></p>
+    </form>
+  </div>
+
+  <!-- HOME PAGE -->
+  <div class="homepage" id="homePage">
+    <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Library Logo" />
+    <h1>Welcome to the Book Library</h1>
+    <p>Explore a world of books across genres, authors, and topics. Find your next favorite read!</p>
+    <button class="btn" onclick="showPage('webpage')">Browse Books</button>
+  </div>
+
+  <!-- WEBPAGE -->
+  <div class="webpage" id="webpage">
+    <header>
+      <h1 class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2N49mgVGM4hkBJclxFJaWrHTLokFcbPCqOQ&s" alt="Logo" class="logo-image" />
+        READICTION
+      </h1>
+      <div class="search-container">
+        <input type="text" placeholder="Search books..." class="search-input" />
+        <button class="search-button">🔍</button>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="gen.html">Genres</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="webpage-bottom">
+      <section>
+        <h2>New Arrivals</h2>
+        <div class="book-carousel">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg" alt="Book 1">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/91uwocAMtSL.jpg" alt="Book 2">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/81gepf1eMqL.jpg" alt="Book 3">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/81YOuOGFCJL.jpg" alt="Book 4">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71aFt4+OTOL.jpg" alt="Book 5">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaITjsDlb1Z2QfRvL4Tojjs7ieBB_IvzUsFA&s" alt="Book 6">
+          <img src="https://res.cloudinary.com/hzpwrwfdi/image/upload/w_220/media/covers/712DAFX4V7L_prebf2" alt="Book 7">
+          <img src="https://cdn.penguin.co.in/wp-content/uploads/2022/02/9780143454458.jpg" alt="Book 8">
+          <img src="https://m.media-amazon.com/images/I/71xoOPLEHxL._UF1000,1000_QL80_.jpg" alt="Book 9">
+          <img src="https://cdn.testbook.com/1695642679794-Mahatma%20Gandhi%20Autobiography%20-%20The%20Story%20Of%20My%20Experiments%20With%20Truth.jpg/1695642681.jpeg" alt="Book 10">
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- QRCode.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
